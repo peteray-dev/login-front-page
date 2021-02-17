@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    <link rel="stylesheet" href="learn.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+</head>
+<body>
+    <section id="land">
+        <div class="container">
+            <div class="row">
+                <div id="firstside" class="col-md-6 col-xs-5">
+                    <h1 id="spacing">Learn to code by <br> watching others</h1>
+                    <p>see how experienced developers solve problems in real time. <br>watching scripted tutorial is great, but understanding 
+                    how <br> developers think is invaluable</p>
+                </div>
+                <div id="try" class='col-md-6 col-xs-7'>
+                    <button id="try2">Try it free 7 days then $20/mo. Thereafter</button>
+                    <div id="detail">
+                        <input id="Fname" class="info" type="text" placeholder="First Name">
+                        <label id="lblfname" >First Name cannot be empty <img src="images/icon-error.svg" alt=""></label>
+                        <input id="Lname" class="info" type="text" placeholder="Last Name">
+                        <label id="lbllname" >Last Name cannot be empty <img src="images/icon-error.svg" alt=""></label>
+                        <input id="Eadd" class="info" type="text" placeholder="Email Address">
+                        <label id="lbleadd" >Looks like this is not an e-mail <img src="images/icon-error.svg" alt=""></label>
+                        <input id="Pass" class="info" type="text" placeholder="Password">
+                        <label id="lblpass" >Password cannot be empty  <img src="images/icon-error.svg" alt=""></label>
+                        <button id="try3" class="info2 btn-success" onclick="claim()">CLAIM YOUR FREE TRIAL</button>
+                        <span>By clicking the button, you are agreeing to our <a id="spa">Terms and Services</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" >
+
+        function claim()
+        {
+            var Fname = document.getElementById('Fname');
+            var Lname = document.getElementById('Lname');
+            var Eadd = document.getElementById('Eadd');
+            var Pass = document.getElementById('Pass');
+        
+            if (Fname.value.trim()=='')
+            {
+                Fname.style.border = 'solid 2px red';
+                document.getElementById('lblfname').style.visibility = 'visible';
+            }
+            
+            if (Lname.value.trim()=='')
+            {
+                // alert('invalid')
+                Lname.style.border = 'solid 2px red';
+                document.getElementById('lbllname').style.visibility = 'visible';
+                // return false; 
+            }
+            if (Eadd.value.trim()=='')
+            {
+                // alert('invalid')
+                Eadd.style.border = 'solid 2px red';
+                document.getElementById('lbleadd').style.visibility = 'visible';
+                // return false ; 
+            }
+            if (Pass.value.trim()=='')
+            {
+                // alert('invalid')
+                Pass.style.border = 'solid 2px red';
+                document.getElementById('lblpass').style.visibility = 'visible';
+                // return false;
+            }
+            else{
+                alert('completed')
+                return true 
+            }
+
+        }    
+    </script>
+</body>
+</html>
